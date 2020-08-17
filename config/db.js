@@ -1,8 +1,9 @@
 const mongoose = require('mongoose');
+const dbconfig = require('./dbconfig');
 
 const connectDB = async ()=>{
     try {
-        const conn = await mongoose.connect('mongodb+srv://evil:evil123@cluster0.ehcjy.mongodb.net/StoryBook?retryWrites=true&w=majority',{
+        const conn = await mongoose.connect(dbconfig.mongoURI,{
             useNewUrlParser:true,
             useUnifiedTopology:true,
             useFindAndModify:false

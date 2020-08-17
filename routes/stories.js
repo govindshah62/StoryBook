@@ -14,7 +14,7 @@ router.post('/',ensureAuth,async(req,res)=>{
         res.redirect('/dashboard');
     } catch (error) {
         console.error(error);
-        res.redirect('error/500');
+        res.render('error/500');
     }
 });
 

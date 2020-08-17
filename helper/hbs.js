@@ -16,7 +16,7 @@ module.exports.truncate=(str, len)=> {
 };
 
 module.exports.stripTags=(input)=>{
-    return input.replace(/<(?:.|\n)*?>/gm, '')
+    return input.replace(/<(?:.|\n)*?>/gm, '');
 };
 
 module.exports.editIcon=(storyUser, loggedUser, storyId, floating = true)=>{

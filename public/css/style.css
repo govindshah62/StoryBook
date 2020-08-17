@@ -1,5 +1,8 @@
 body{
     background: aquamarine;  
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
 p{
@@ -21,4 +24,8 @@ p{
 }
 .img-small{
     width: 180px;
+}
+
+main {
+    flex: 1 0 auto;
 }
