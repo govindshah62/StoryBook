@@ -38,4 +38,3 @@ module.exports = function(passport){
         User.findById(id, (err, user)=>done(err, user));
     }); 
 }
-

@@ -1,8 +1,8 @@
 const moment = require('moment')
 
 module.exports.formatDate= (date, format)=>{
-    return moment(date).utc().format(format)
-}
+    return moment(date).format(format);
+};
 
 module.exports.truncate=(str, len)=> {
     if (str.length > len && str.length > 0) {
@@ -13,11 +13,11 @@ module.exports.truncate=(str, len)=> {
       return new_str + '...'
     }
     return str
-}
+};
 
 module.exports.stripTags=(input)=>{
     return input.replace(/<(?:.|\n)*?>/gm, '')
-}
+};
 
 module.exports.editIcon=(storyUser, loggedUser, storyId, floating = true)=>{
     if (storyUser._id.toString() == loggedUser._id.toString()) {
@@ -38,9 +38,8 @@ module.exports.select=(selected, options)=>{
         new RegExp(' value="' + selected + '"'),
         '$& selected="selected"'
       )
-      
       .replace(
         new RegExp('>' + selected + '</option>'),
         ' selected="selected"$&'
       )
-}
+};
