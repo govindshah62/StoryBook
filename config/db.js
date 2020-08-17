@@ -3,7 +3,7 @@ const dbconfig = require('./dbconfig');
 
 const connectDB = async ()=>{
     try {
-        const conn = await mongoose.connect(dbconfig.mongoURI,{
+        const conn = await mongoose.connect('mongodb://localhost/StoryBook',{
             useNewUrlParser:true,
             useUnifiedTopology:true,
             useFindAndModify:false
